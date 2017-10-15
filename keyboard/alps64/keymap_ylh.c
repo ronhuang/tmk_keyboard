@@ -21,7 +21,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
         LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT, \
         LCTL,LALT,LGUI,          SPC,                          RGUI,APP, FN0),
 
-    /* HHKB mode[HHKB Fn]
+    /* HHKB mode
      * ,-----------------------------------------------------------.
      * |Grv| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins    |
      * |-----------------------------------------------------------|
@@ -39,9 +39,30 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS,UP,  TRNS,TRNS, \
         CAPS,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,PSLS,HOME,PGUP,LEFT,RGHT,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PPLS,PMNS,END, PGDN,DOWN,TRNS,           \
+        TRNS,TRNS,TRNS,          TRNS,                         TRNS,FN1 ,TRNS),
+
+    /* Arrow mode
+     * ,-----------------------------------------------------------.
+     * |   |   |   |   |   |   |   |   |   |   |   |   |   |       |
+     * |-----------------------------------------------------------|
+     * |     |   |   |   |   |   |   |   |   |   |   |Up |   |     |
+     * |-----------------------------------------------------------|
+     * |      |   |   |   |   |   |   |   |   |   |Lef|Rig|        |
+     * |-----------------------------------------------------------|
+     * |        |   |   |   |   |   |   |   |   |   |Dow|          |
+     * |-----------------------------------------------------------|
+     * |     |    |     |                        |      |    |     |
+     * `-----------------------------------------------------------'
+     */
+    [2] = KEYMAP_AEK( \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,UP,  TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,RGHT,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,DOWN,TRNS,           \
         TRNS,TRNS,TRNS,          TRNS,                         TRNS,TRNS,TRNS),
 };
 
 const action_t fn_actions[] PROGMEM = {
-    [0]  = ACTION_LAYER_MOMENTARY(1),
+    [0] = ACTION_LAYER_MOMENTARY(1),
+    [1] = ACTION_LAYER_TOGGLE(2),
 };
