@@ -14,7 +14,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Fn |
      * |-----------------------------------------------------------|
-     * |Ctrl|Alt |Gui |      Space             |Gui |Alt |App |Ctrl|
+     * |Ctrl|Gui |Alt |      Space             |Alt |Gui |App |Ctrl|
      * `-----------------------------------------------------------'
      */
     KEYMAP_HHKB(
@@ -22,7 +22,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC,      \
         LCTL,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,     ENT,       \
         LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,     RSFT,FN0,       \
-        LCTL,LALT,LGUI,          SPC,                     RGUI,RALT,APP ,RCTL),
+        LCTL,LGUI,LALT,          SPC,                     RALT,RGUI,APP ,RCTL),
     /* 1: YLH Fn layer
      * ,-----------------------------------------------------------.
      * |Pwr| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
